@@ -13,7 +13,4 @@ cargo_build() {
     fi
 }
 
-arch=$(uname)
-case "${arch}" in
-    *) echo "No pre-built binary available for ${arch}."; cargo_build ;;
-esac
+cargo_build
