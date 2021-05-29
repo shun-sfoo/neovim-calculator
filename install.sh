@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
-set -o errexit
+# Try install by
+#   - download binary
+#   - build with cargo
 
-name=neovim-calculator
+set -o nounset    # error when referencing undefined variable
+set -o errexit    # exit when command fails
 
 cargo_build() {
     if command -v cargo > /dev/null; then
